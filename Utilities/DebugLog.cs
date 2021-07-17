@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using UnityEngine;
 
 namespace MonoInjectionTemplate
 {
@@ -14,7 +13,7 @@ namespace MonoInjectionTemplate
         {
 #if DEBUG
             usingTimeStamps = useTimeStamps;
-            logFile = File.AppendText($"{DateTime.Now.ToLongTimeString()}_log.txt");
+            logFile = File.AppendText($"log.txt");
 #endif
         }
         public void Log(string msg)

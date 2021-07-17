@@ -1,6 +1,5 @@
 ﻿using System.IO;
 
-
 namespace MonoInjectionTemplate
 {
     public class DebugConsole
@@ -28,6 +27,7 @@ namespace MonoInjectionTemplate
             _stdOutWriter.AutoFlush = true;
 
             AttachConsole(-1);
+            WriteLine("Console Initialized");
 #endif
         }
 

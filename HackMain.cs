@@ -20,12 +20,15 @@ namespace MonoInjectionTemplate
             m_Log.Log("Start()");
             m_Log.Error("Example Error");
             m_Log.Info("Information!");
+            SetEntityUpdate();
         }
 
         /* - Game Loop Methods - */
         public void Update()
         {   // This function is called once per frame, it's frequency depends on the frame rate.
             // This is at the beginning of the game logic cycle.
+            EntityUpdate(); // See EntityUpdate.cs
+            
         }
         public void LateUpdate()
         {   // This function is called once per frame, it's frequency depends on the frame rate.
@@ -34,9 +37,20 @@ namespace MonoInjectionTemplate
         public void OnGUI()
         {   // This function is called at the end of the frame, after all game logic.
             // It is called twice per frame: Once for rendering, and once for GUI Events
+
             GUI.Label(new Rect(100, 100, 300, 100), "Hello World!");
+
+            SetGUIFontStyle(36,Color.green);
+            
+            GUI.Label(new Rect(100, 150, 300, 100), "Hello World!");
+
+            foreach (var enemy in enemies)
+            {
+                Basic_ESP(enemy.transform,"Enemy");
+            }
         }
-        
+
+
         /* - Physics Method - */
         public void FixedUpdate()
         {   // This function is called at a fixed frequency (Typically 100hz) and is independent of the frame rate.
@@ -47,12 +61,13 @@ namespace MonoInjectionTemplate
         public void OnDisable()
         {   // This function is called when the instance of the class is disabled by it's parent.
             // The component remains attached, but disabled (Component.ENABLED = false)
-            m_Console.WriteLine("OnDisable()");
         }
         public void OnDestroy()
         {   // This function is called when the instance of the class is destroyed by it's parent.
             // The component and all it's data are destroyed and must be created again.
-            m_Console.WriteLine("OnDestroy()");
         }
+
+        private ZH_AINav[] enemies;
+
     }
 }

@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Zero Hour\Zero Hour_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Zero Hour\Zero Hour_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -329,8 +335,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GenericCamera.cs" />
-    <Compile Include="GenericFunctions.cs" />
+    <Compile Include="UnityFunctions\EntityUpdate.cs" />
+    <Compile Include="UnityFunctions\GenericCamera.cs" />
+    <Compile Include="UnityFunctions\GenericFunctions.cs" />
+    <Compile Include="UnityFunctions\GenericGUI.cs" />
     <Compile Include="Utilities\DebugConsole.cs" />
     <Compile Include="Utilities\DebugLog.cs" />
     <Compile Include="HackMain.cs" />

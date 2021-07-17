@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace MonoInjectionTemplate
 {
@@ -7,20 +6,19 @@ namespace MonoInjectionTemplate
     {
         // Setup a local camera
         Camera _mCamera;
-        
         private void AssignCamera()
         { // Set out camera to reference the main (Current) camera in the host game
             _mCamera = Camera.main;
         }
-
-        private Vector2 W2S(Vector3 WorldPosition)
+        
+        private Vector3 W2S(Vector3 worldPosition)
         { // Returns the screen position of a point in 3D space (relative to the camera)
-            return _mCamera.WorldToScreenPoint(WorldPosition);
+            return _mCamera.WorldToScreenPoint(worldPosition);
         }
-
-        private float Distance(Vector3 WorldPosition)
+        
+        private float Distance(Vector3 worldPosition)
         { // Returns the distance from the camera to a point in 3D space
-            return Vector3.Distance(_mCamera.transform.position, WorldPosition);
+            return Vector3.Distance(_mCamera.transform.position, worldPosition);
         }
         
         private void Basic_ESP(Transform transform, string text)
@@ -37,13 +35,14 @@ namespace MonoInjectionTemplate
                             text);
             }
         }
-        private void Basic_ESP(Vector3 WorldPosition, string text)
+        
+        private void Basic_ESP(Vector3 worldPosition, string text)
         { // Simple ESP function that takes a point in 3D space as a parameter
-            Vector3 pos = _mCamera.WorldToScreenPoint(WorldPosition);
+            Vector3 pos = _mCamera.WorldToScreenPoint(worldPosition);
             if (pos.z > 0)
             {
                 int numLines = text.Split('\n').Length;
-                float distance = Vector3.Distance(_mCamera.transform.position, WorldPosition);
+                float distance = Vector3.Distance(_mCamera.transform.position, worldPosition);
                 GUI.Label(new Rect(
                             pos.x, 
                             Screen.height - pos.y,
@@ -53,6 +52,5 @@ namespace MonoInjectionTemplate
             }
         }
         
-
     }
 }
