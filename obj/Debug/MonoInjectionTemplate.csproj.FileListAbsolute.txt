@@ -1,6 +1,0 @@
-C:\Users\DT\source\repos\MonoInjectionTemplate\MonoInjectionTemplate\bin\Debug\MonoInjectionTemplate.dll
-C:\Users\DT\source\repos\MonoInjectionTemplate\MonoInjectionTemplate\bin\Debug\MonoInjectionTemplate.pdb
-C:\Users\DT\source\repos\MonoInjectionTemplate\MonoInjectionTemplate\obj\Debug\MonoInjectionTemplate.csproj.AssemblyReference.cache
-C:\Users\DT\source\repos\MonoInjectionTemplate\MonoInjectionTemplate\obj\Debug\MonoInjectionTemplate.csproj.CoreCompileInputs.cache
-C:\Users\DT\source\repos\MonoInjectionTemplate\MonoInjectionTemplate\obj\Debug\MonoInjectionTemplate.dll
-C:\Users\DT\source\repos\MonoInjectionTemplate\MonoInjectionTemplate\obj\Debug\MonoInjectionTemplate.pdb
