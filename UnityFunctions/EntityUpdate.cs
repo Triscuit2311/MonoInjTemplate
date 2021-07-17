@@ -16,10 +16,8 @@ namespace MonoInjectionTemplate
             {
                 ///////////////////////////////////////////
                 // Entity updates go here
-                
-                enemies = FindObjectsOfType<ZH_AINav>();
-                
                 AssignCamera();
+
                 
                 ///////////////////////////////////////////
                 SetEntityUpdate();

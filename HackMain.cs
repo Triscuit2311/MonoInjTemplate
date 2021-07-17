@@ -39,15 +39,6 @@ namespace MonoInjectionTemplate
             // It is called twice per frame: Once for rendering, and once for GUI Events
 
             GUI.Label(new Rect(100, 100, 300, 100), "Hello World!");
-
-            SetGUIFontStyle(36,Color.green);
-            
-            GUI.Label(new Rect(100, 150, 300, 100), "Hello World!");
-
-            foreach (var enemy in enemies)
-            {
-                Basic_ESP(enemy.transform,"Enemy");
-            }
         }
 
 
@@ -66,8 +57,6 @@ namespace MonoInjectionTemplate
         {   // This function is called when the instance of the class is destroyed by it's parent.
             // The component and all it's data are destroyed and must be created again.
         }
-
-        private ZH_AINav[] enemies;
 
     }
 }
