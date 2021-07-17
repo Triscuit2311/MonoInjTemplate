@@ -28,7 +28,6 @@ namespace MonoInjectionTemplate
         {   // This function is called once per frame, it's frequency depends on the frame rate.
             // This is at the beginning of the game logic cycle.
             EntityUpdate(); // See EntityUpdate.cs
-            
         }
         public void LateUpdate()
         {   // This function is called once per frame, it's frequency depends on the frame rate.
@@ -40,8 +39,7 @@ namespace MonoInjectionTemplate
 
             GUI.Label(new Rect(100, 100, 300, 100), "Hello World!");
         }
-
-
+        
         /* - Physics Method - */
         public void FixedUpdate()
         {   // This function is called at a fixed frequency (Typically 100hz) and is independent of the frame rate.

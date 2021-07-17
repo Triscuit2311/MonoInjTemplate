@@ -18,7 +18,6 @@ namespace MonoInjectionTemplate
                 // Entity updates go here
                 AssignCamera();
 
-                
                 ///////////////////////////////////////////
                 SetEntityUpdate();
             }
