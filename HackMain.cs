@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.CodeAnalysis;
+﻿using System.Collections;
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 
 namespace MonoInjectionTemplate
@@ -8,27 +9,34 @@ namespace MonoInjectionTemplate
     {
         /* - Initializing Methods - */
         public void Awake()
-        {   // This function is called when the class is loaded by the game (prior to attachment)
+        {
+            // This function is called when the class is loaded by the game (prior to attachment)
         }
+
         public void OnEnable()
-        {   // This function is called when the script is enabled by the parent object
+        {
+            // This function is called when the script is enabled by the parent object
         }
+
         public void Start()
-        {   // This function is called once for each instance of this class,
+        {
+            // This function is called once for each instance of this class,
             // when it starts execution (in this case, attached to an object)
             m_Console.WriteLine("Start()");
             m_Log.Log("Start()");
             m_Log.Error("Example Error");
             m_Log.Info("Information!");
-            SetEntityUpdate();
+            EntityUpdate = EntityUpdateFunct(0);
+            StartCoroutine(EntityUpdate);
         }
 
         /* - Game Loop Methods - */
         public void Update()
-        {   // This function is called once per frame, it's frequency depends on the frame rate.
+        {
+            // This function is called once per frame, it's frequency depends on the frame rate.
             // This is at the beginning of the game logic cycle.
-            EntityUpdate(); // See EntityUpdate.cs
         }
+
         public void LateUpdate()
         {   // This function is called once per frame, it's frequency depends on the frame rate.
             // This is at the end of the game logic cycle.
