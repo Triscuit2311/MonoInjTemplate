@@ -7,4 +7,4 @@ In this tutorial I hope to provide some education on Unity, in particular, makin
 
 Here is the video, it's ~50 minutes long and it explains the absolute basics of making a mono cheat for a unity game: https://www.youtube.com/watch?v=kHjxxQ3TsIQ
 
-Text Turotial Part 1: https://guidedhacking.com/threads/how-to-hack-unity-mono-injection-codestage-anticheat.17915/#post-112559
+Text Tutorial: https://guidedhacking.com/threads/how-to-hack-unity-mono-injection-codestage-anticheat.17915/#post-112559
