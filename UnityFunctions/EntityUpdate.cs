@@ -12,7 +12,7 @@ namespace MonoInjectionTemplate
             yield return new WaitForSeconds(time);
             // Update Entities here //
             
-            _mCamera = Camera.main;
+            AssignCamera();
 
             ///////////////////////////
             EntityUpdate = EntityUpdateFunct(5);
