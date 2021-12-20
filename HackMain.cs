@@ -1,5 +1,7 @@
 ﻿using System.Collections;
 using System.Diagnostics.CodeAnalysis;
+using MonoInjectionTemplate.UI;
+using MonoInjectionTemplate.Utilities;
 using UnityEngine;
 
 namespace MonoInjectionTemplate
@@ -7,6 +9,8 @@ namespace MonoInjectionTemplate
     [SuppressMessage("ReSharper", "Unity.RedundantEventFunction")]
     partial class HackMain : MonoBehaviour
     {
+        private GuiHandler _guiHandler;
+        
         /* - Initializing Methods - */
         public void Awake()
         {
@@ -22,12 +26,13 @@ namespace MonoInjectionTemplate
         {
             // This function is called once for each instance of this class,
             // when it starts execution (in this case, attached to an object)
-            m_Console.WriteLine("Start()");
+            ConsoleBase.WriteLine("HackMain Start()");
             m_Log.Log("Start()");
             m_Log.Error("Example Error");
             m_Log.Info("Information!");
             EntityUpdate = EntityUpdateFunct(0);
             StartCoroutine(EntityUpdate);
+            _guiHandler = gameObject.AddComponent<GuiHandler>();
         }
 
         /* - Game Loop Methods - */
