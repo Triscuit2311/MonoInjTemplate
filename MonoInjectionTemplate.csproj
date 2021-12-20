@@ -66,19 +66,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UI\GuiWindow.cs" />
-    <Compile Include="UI\GuiHandler.cs" />
-    <Compile Include="UI\ItemContainers.cs" />
-    <Compile Include="UnityFunctions\EntityUpdate.cs" />
-    <Compile Include="UnityFunctions\GenericCamera.cs" />
-    <Compile Include="UnityFunctions\GenericFunctions.cs" />
-    <Compile Include="UnityFunctions\GenericGUI.cs" />
-    <Compile Include="Utilities\DebugConsole.cs" />
-    <Compile Include="Utilities\DebugLog.cs" />
-    <Compile Include="HackMain.cs" />
-    <Compile Include="Loader\Loader.cs" />
+    <Compile Include="src\HackMain.cs" />
+    <Compile Include="src\Loader\Loader.cs" />
+    <Compile Include="src\UI\GuiHandler.cs" />
+    <Compile Include="src\UI\GuiWindow.cs" />
+    <Compile Include="src\UI\ItemContainers.cs" />
+    <Compile Include="src\UnityFunctions\EntityUpdate.cs" />
+    <Compile Include="src\UnityFunctions\GenericCamera.cs" />
+    <Compile Include="src\UnityFunctions\GenericFunctions.cs" />
+    <Compile Include="src\UnityFunctions\GenericGUI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utilities\Utility.cs" />
+    <Compile Include="src\Utilities\DebugConsole.cs" />
+    <Compile Include="src\Utilities\DebugLog.cs" />
+    <Compile Include="src\Utilities\Utility.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="UnityLibs\UnityEngine.CoreModule.dll" />
