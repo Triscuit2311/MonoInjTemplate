@@ -25,14 +25,13 @@ namespace MonoInjectionTemplate.UI
             _window1.AddToggle("Toggle 1", () => _toggleState = !_toggleState);
             _window1.AddSlider("Slider 1",0,10, (float x) => someFloat1 = x, 3);
             _window1.AddSlider("Slider, thresh 2f", 2,100, (float x) => someFloat2 = x,18,2.0f);
-
         }
 
         public void OnGUI()
         {
-            GUI.Label(new Rect(100,100,200,300),
+            GUI.Label(new Rect(100,200,200,300),
                 $"Toggle State: {(_toggleState? "true":"false")}");
-            GUI.Label(new Rect(100,130,200,300),
+            GUI.Label(new Rect(100,230,200,300),
                 $"Sliders: [someFloat1:{someFloat1}] [someFloat2:{someFloat2}]");
         }
     }
